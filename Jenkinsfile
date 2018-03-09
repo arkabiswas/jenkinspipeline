@@ -9,6 +9,9 @@ pipeline {
     triggers {
          pollSCM('* * * * *') // Polling Source Control
      }
+    tools {
+        maven 'localMVN'
+    }
 
 stages{
         stage('Build'){
